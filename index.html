@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMART FISH - Jual Ikan Lele Segar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; }
+    .hero-bg {
+      background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+                  url('lele.jpeg') center/cover no-repeat;
+    }
+    .logo-gradient {
+      background: linear-gradient(to right, #60a5fa, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .form-input {
+      transition: all 0.3s;
+    }
+    .form-input:focus {
+      border-color: #f97316;
+      box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.2);
+    }
+    .team-card {
+      transition: all 0.3s;
+    }
+    .team-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 25px 25px 0 -10px rgb(249 115 22);
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+
+  <!-- NAVBAR -->
+  <nav class="bg-[#0f172a] shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <i class="fa-solid fa-fish text-4xl text-sky-400"></i>
+        <h1 class="text-3xl font-bold logo-gradient">SMART FISH</h1>
+      </div>
+      <div class="hidden md:flex items-center gap-8 text-white">
+        <a href="#home" class="hover:text-sky-400">Beranda</a>
+        <a href="#profil" class="hover:text-sky-400">Profil</a>
+        <a href="#keunggulan" class="hover:text-sky-400">Keunggulan</a>
+        <a href="#pesan" class="hover:text-sky-400">Pesan Sekarang</a>
+        <a href="#stok" class="hover:text-sky-400">Cek Stok</a>
+        <a href="#tim" class="hover:text-sky-400">Struktur Tim</a>
+      </div>
+      <button onclick="hubungiWA()" 
+              class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-2xl flex items-center gap-2 font-semibold">
+        <i class="fa-solid fa-whatsapp"></i> Hubungi WA
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home" class="hero-bg text-white py-28 md:py-32">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md text-white text-sm font-semibold px-6 py-2.5 rounded-3xl mb-6">
+        <i class="fa-solid fa-leaf text-emerald-400"></i>
+        SEGAR &amp; TERPERCAYA
+      </div>
+
+      <h1 class="text-5xl md:text-6xl font-bold leading-tight max-w-3xl mx-auto">
+        Jual Ikan Lele Segar &amp; Berkualitas
+      </h1>
+      
+      <p class="mt-6 text-xl md:text-2xl max-w-2xl mx-auto">
+        Bebas bau lumpur, ukuran seragam, FREE Delivery dan bergaransi.<br>
+        Stok melimpah dengan harga di bawah pasar!
+      </p>
+
+      <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+        <button onclick="document.getElementById('pesan').scrollIntoView({ behavior: 'smooth' })" 
+                class="bg-orange-500 hover:bg-orange-600 text-white px-10 py-5 rounded-3xl text-xl font-semibold flex items-center justify-center gap-3 shadow-xl">
+          <i class="fa-solid fa-fish"></i> Pesan Sekarang
+        </button>
+        
+        <button onclick="cekStok()" 
+                class="border-2 border-white hover:bg-white/10 text-white px-10 py-5 rounded-3xl text-xl font-semibold flex items-center justify-center gap-3">
+          <i class="fa-solid fa-magnifying-glass"></i> Cek Stok Hari Ini
+        </button>
+      </div>
+
+      <div class="mt-16 grid grid-cols-3 gap-8 max-w-md mx-auto text-center">
+        <div>
+          <div class="text-4xl font-bold">500+</div>
+          <div class="text-sm opacity-75">Pelanggan Puas</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold">20+</div>
+          <div class="text-sm opacity-75">Mitra Warung/Resto</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold">4.9</div>
+          <div class="text-sm opacity-75">Rating Kualitas</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="profil" class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-[#0f172a] mb-8 border-l-8 border-sky-500 pl-4">Profil Smart Fish</h2>
+      
+      <div class="prose prose-lg text-gray-600 mb-12 max-w-none">
+        <p class="leading-relaxed">
+          <strong>SMART FISH</strong> adalah platform penyedia komoditas perikanan air tawar berbasis teknologi terintegrasi yang menghadirkan solusi pemenuhan kebutuhan pangan protein berkualitas dengan prinsip transparansi penuh melalui slogan <strong>"Segar, Sehat, Terpercaya"</strong>. 
+        </p>
+        <p class="mt-4">
+          Sebagai pionir budidaya lele modern yang mengintegrasikan sistem <em>Smart Supply Chain</em> dan teknologi <em>Auto-feeder</em>, kami memastikan setiap produk yang dihasilkan bebas dari bau lumpur, memiliki ukuran yang seragam, dan dipanen tepat waktu. Fokus kami adalah memberikan kepastian harga di bawah pasar, jaminan kualitas produk bergaransi, dan mendukung ketahanan pangan lokal.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="profile-card p-8 rounded-3xl bg-gray-50 border border-gray-100 shadow-sm">
+          <div class="flex items-center gap-3 mb-4">
+            <i class="fa-solid fa-eye text-sky-500 text-2xl"></i>
+            <h3 class="text-2xl font-bold text-[#0f172a]">Visi</h3>
+          </div>
+          <p class="text-gray-600 italic">
+            "Menjadi platform Smart Supply Chain perikanan air tawar terdepan di Indonesia yang mentransformasi industri budidaya konvensional melalui integrasi teknologi digital, kualitas produk premium, dan efisiensi rantai pasok untuk kesejahteraan masyarakat."
+          </p>
+        </div>
+
+        <div class="profile-card p-8 rounded-3xl bg-gray-50 border border-gray-100 shadow-sm">
+          <div class="flex items-center gap-3 mb-4">
+            <i class="fa-solid fa-bullseye text-sky-500 text-2xl"></i>
+            <h3 class="text-2xl font-bold text-[#0f172a]">Misi</h3>
+          </div>
+          <ul class="space-y-4 text-gray-600">
+            <li class="flex gap-3 text-sm leading-snug">
+              <i class="fa-solid fa-circle-check text-emerald-500 mt-1"></i>
+              <span><strong>Kualitas Unggulan:</strong> Bebas bau lumpur dengan nutrisi terjaga melalui sistem filtrasi & manajemen pakan.</span>
+            </li>
+            <li class="flex gap-3 text-sm leading-snug">
+              <i class="fa-solid fa-circle-check text-emerald-500 mt-1"></i>
+              <span><strong>Transparansi:</strong> Kepastian harga kompetitif langsung kepada konsumen dan UMKM.</span>
+            </li>
+            <li class="flex gap-3 text-sm leading-snug">
+              <i class="fa-solid fa-circle-check text-emerald-500 mt-1"></i>
+              <span><strong>Teknologi:</strong> Penerapan Smart Farming (Auto-feeder & Water Monitoring).</span>
+            </li>
+            <li class="flex gap-3 text-sm leading-snug">
+              <i class="fa-solid fa-circle-check text-emerald-500 mt-1"></i>
+              <span><strong>Pemberdayaan:</strong> Membangun ekosistem bisnis saling menguntungkan dengan mitra kuliner.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEUNGGULAN -->
+  <section id="keunggulan" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">Kenapa Pilih Smart Fish?</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center p-8 bg-gray-50 rounded-3xl">
+          <i class="fa-solid fa-fish text-5xl text-sky-500 mb-6"></i>
+          <h3 class="font-semibold text-2xl">Lele Segar Langsung Dari Kolam</h3>
+          <p class="mt-4 text-gray-600">Panen harian, tidak ada bau lumpur</p>
+        </div>
+        <div class="text-center p-8 bg-gray-50 rounded-3xl">
+          <i class="fa-solid fa-ruler text-5xl text-sky-500 mb-6"></i>
+          <h3 class="font-semibold text-2xl">Ukuran Seragam</h3>
+          <p class="mt-4 text-gray-600">7-9 ekor per kilo (standar)</p>
+        </div>
+        <div class="text-center p-8 bg-gray-50 rounded-3xl">
+          <i class="fa-solid fa-truck text-5xl text-sky-500 mb-6"></i>
+          <h3 class="font-semibold text-2xl">Free Delivery + Garansi</h3>
+          <p class="mt-4 text-gray-600">Hidup sampai tujuan atau kami ganti</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PESAN SEKARANG -->
+  <section id="pesan" class="py-20 bg-gray-100">
+    <div class="max-w-2xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-10">Pesan Lele Segar Sekarang</h2>
+      
+      <form id="formPesan" class="bg-white p-8 md:p-10 rounded-3xl shadow-2xl space-y-6">
+        <input id="nama" type="text" placeholder="Nama Lengkap" class="form-input w-full px-6 py-4 border rounded-2xl focus:outline-none text-lg">
+        
+        <div class="grid grid-cols-2 gap-4">
+          <label onclick="togglePengiriman()" class="cursor-pointer">
+            <input type="radio" name="pengiriman" value="Diantar" checked class="peer hidden">
+            <div class="peer-checked:bg-orange-500 peer-checked:text-white flex items-center justify-center gap-2 border-2 border-gray-200 rounded-2xl px-6 py-4 text-center font-medium hover:border-orange-300">
+              🚚 Diantar ke alamat
+            </div>
+          </label>
+          <label onclick="togglePengiriman()" class="cursor-pointer">
+            <input type="radio" name="pengiriman" value="Ambil Sendiri" class="peer hidden">
+            <div class="peer-checked:bg-orange-500 peer-checked:text-white flex items-center justify-center gap-2 border-2 border-gray-200 rounded-2xl px-6 py-4 text-center font-medium hover:border-orange-300">
+              📍 Ambil sendiri di lokasi
+            </div>
+          </label>
+        </div>
+
+        <input id="wa" type="tel" placeholder="Nomor WA" class="form-input w-full px-6 py-4 border rounded-2xl focus:outline-none text-lg">
+
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="text-sm text-gray-500 block mb-1">Ukuran</label>
+            <select id="ukuran" class="form-input w-full px-6 py-4 border rounded-2xl focus:outline-none text-lg">
+              <option value="7-9 ekor per kilo">7-9 ekor per kilo (standar)</option>
+              <option value="Ukuran besar (>10 ekor/kg)">Ukuran besar (>10 ekor/kg)</option>
+            </select>
+          </div>
+          <div>
+            <label class="text-sm text-gray-500 block mb-1">Jumlah (kg)</label>
+            <input id="jumlah" type="number" placeholder="Contoh: 5" class="form-input w-full px-6 py-4 border rounded-2xl focus:outline-none text-lg">
+          </div>
+        </div>
+
+        <textarea id="alamat" placeholder="Alamat lengkap + catatan khusus (kosongkan jika ambil sendiri)" rows="4" class="form-input w-full px-6 py-4 border rounded-3xl focus:outline-none text-lg"></textarea>
+
+        <button type="button" onclick="kirimKeWA()" 
+                class="w-full bg-orange-500 hover:bg-orange-600 text-white py-6 rounded-3xl text-2xl font-bold flex items-center justify-center gap-3">
+          <i class="fa-solid fa-paper-plane"></i>
+          Kirim Pesanan
+        </button>
+
+        <div class="text-center pt-4 border-t">
+          <p class="text-sm text-gray-500 flex items-center justify-center gap-2">
+            📍 Lokasi kami:
+            <a href="https://maps.app.goo.gl/Xph6nzo5iVnDGxsY9" target="_blank" class="text-orange-500 underline hover:text-orange-600 font-medium">
+              Buka Google Maps
+            </a>
+          </p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- CEK STOK -->
+  <section id="stok" class="py-20 bg-white">
+    <div class="max-w-xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-8">Cek Stok Hari Ini</h2>
+      <div class="flex gap-3 max-w-md mx-auto">
+        <input id="inputStok" type="text" placeholder="Masukkan tanggal (contoh: 30 Maret)" class="flex-1 px-6 py-6 border rounded-3xl text-lg focus:border-orange-500 outline-none">
+        <button onclick="cekStokHariIni()" class="bg-orange-500 text-white px-12 rounded-3xl font-semibold hover:bg-orange-600">CEK STOK</button>
+      </div>
+      <div id="hasilStok" class="mt-8 hidden bg-emerald-50 p-8 rounded-3xl text-left"></div>
+    </div>
+  </section>
+
+  <!-- STRUKTUR TIM -->
+  <section id="tim" class="py-20 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-3">Struktur Tim Smart Catfish Supply Chain</h2>
+      <p class="text-center text-gray-600 mb-12">Tim inti yang mengelola produksi, teknologi, pemasaran, dan keuangan</p>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <!-- 1. Galang - CEO -->
+        <div class="team-card bg-white rounded-3xl overflow-hidden shadow">
+          <img src="galangweb.jpeg" 
+               alt="Galang - CEO" 
+               class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="text-2xl font-bold">Galang</h3>
+            <p class="text-orange-500 font-semibold">CEO</p>
+            <p class="text-xs text-gray-500 mb-4">NIM: 2407041</p>
+            <p class="text-sm leading-relaxed text-gray-700">
+              Bertanggung jawab sebagai koordinator utama yang mengawasi seluruh alur kerja sistem Smart Catfish Supply Chain. 
+              Memiliki keterampilan dalam perencanaan produksi dan pengambilan keputusan strategis berbasis data lapangan.
+            </p>
+          </div>
+        </div>
+
+        <!-- 2. Sujarwin - COO & CTO (GAMBAR BARU SUDAH DIGANTI) -->
+        <div class="team-card bg-white rounded-3xl overflow-hidden shadow">
+          <!-- ←←← GANTI SRC INI DENGAN GAMBAR SUJARWIN YANG BARU ←←← -->
+          <img src="jarwin.jpeg" 
+               alt="Sujarwin - COO & CTO" 
+               class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="text-2xl font-bold">Sujarwin</h3>
+            <p class="text-orange-500 font-semibold">COO &amp; CTO</p>
+            <p class="text-xs text-gray-500 mb-4">NIM: 2407096</p>
+            <p class="text-sm leading-relaxed text-gray-700">
+              Berfokus pada pemeliharaan ikan lele dan pengembangan infrastruktur fisik, termasuk perancangan serta perbaikan unit Auto-feeder dan sistem filtrasi air. 
+              Kompetensi Sujarwin memastikan seluruh aset teknologi tepat guna berfungsi optimal secara terus-menerus.
+            </p>
+          </div>
+        </div>
+
+        <!-- 3. M. Bintang Syah - CMO -->
+        <div class="team-card bg-white rounded-3xl overflow-hidden shadow">
+          <img src="dewa.jpeg" alt="M. Bintang Syah - CMO" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="text-2xl font-bold">M. Bintang Syah</h3>
+            <p class="text-orange-500 font-semibold">CMO</p>
+            <p class="text-xs text-gray-500 mb-4">NIM: 2407060</p>
+            <p class="text-sm leading-relaxed text-gray-700">
+              Bertugas dalam membangun jejaring dengan mitra UMKM kuliner di Yogyakarta. Dewa memiliki keterampilan komunikasi dan negosiasi untuk memastikan target serapan pasar harian tercapai melalui sistem distribusi langsung.
+            </p>
+          </div>
+        </div>
+
+        <!-- 4. M. Zaki Abdurrahman - CFO -->
+        <div class="team-card bg-white rounded-3xl overflow-hidden shadow">
+          <img src="jaki.jpeg" alt="M. Zaki Abdurrahman - CFO" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="text-2xl font-bold">M. Zaki Abdurrahman</h3>
+            <p class="text-orange-500 font-semibold">CFO</p>
+            <p class="text-xs text-gray-500 mb-4">NIM: 2407078</p>
+            <p class="text-sm leading-relaxed text-gray-700">
+              Bertanggung jawab atas pengelolaan dana hibah P2MW sebesar Rp15.000.000, pencatatan arus kas harian, serta manajemen stok bahan baku (pakan pelet, ampas tahu, dan bibit) untuk mencegah terjadinya pemborosan sumber daya.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#0f172a] text-white py-12">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <div class="flex justify-center items-center gap-3 mb-4">
+        <i class="fa-solid fa-fish text-4xl text-sky-400"></i>
+        <h1 class="text-3xl font-bold logo-gradient">SMART FISH</h1>
+      </div>
+      <p class="text-lg">Ikan Lele Segar • 7-9 ekor per kilo • Bebas Lumpur • Harga Grosir</p>
+      <p class="mt-6 flex items-center justify-center gap-2 text-orange-400">
+        <i class="fa-solid fa-whatsapp"></i>
+        <a href="https://wa.me/6289601561469" target="_blank" class="hover:underline">0896-0156-1469</a>
+      </p>
+      <p class="mt-8 text-sm opacity-75">© 2026 SMART FISH • Free Delivery Yogyakarta radius 10 km dari lokasi kami &amp; sekitarnya</p>
+    </div>
+  </footer>
+
+  <script>
+    function hubungiWA() {
+      window.open('https://wa.me/6289601561469', '_blank');
+    }
+
+    function togglePengiriman() {}
+
+    function kirimKeWA() {
+      const nama = document.getElementById('nama').value.trim() || '-';
+      const waNum = document.getElementById('wa').value.trim() || '-';
+      const pengiriman = document.querySelector('input[name="pengiriman"]:checked').value;
+      const ukuran = document.getElementById('ukuran').value;
+      const jumlah = document.getElementById('jumlah').value.trim() || '-';
+      const alamat = document.getElementById('alamat').value.trim() || '-';
+
+      let pesan = `*PESANAN LELE SEGAR SMART FISH*%0A%0A`;
+      pesan += `👤 Nama: ${nama}%0A`;
+      pesan += `📱 WA: ${waNum}%0A`;
+      pesan += `🚚 Pengiriman: ${pengiriman}%0A`;
+      pesan += `📏 Ukuran: ${ukuran}%0A`;
+      pesan += `⚖️ Jumlah: ${jumlah} kg%0A`;
+      pesan += `📍 Alamat: ${alamat}%0A%0A`;
+      pesan += `🙏 Mohon diproses ya! Terima kasih.`;
+
+      window.open(`https://wa.me/6289601561469?text=${pesan}`, '_blank');
+      document.getElementById('formPesan').reset();
+    }
+
+    function cekStok() {
+      alert("📦 Stok hari ini tersedia!\n\nLele 7-9 ekor/kg: 450 kg\nLele ukuran besar: 180 kg\nSiap kirim hari ini.");
+    }
+
+    function cekStokHariIni() {
+      const input = document.getElementById("inputStok").value.trim();
+      const hasil = document.getElementById("hasilStok");
+      if (!input) return alert("Masukkan tanggal dulu ya!");
+      
+      hasil.classList.remove("hidden");
+      hasil.innerHTML = `
+        <p class="font-bold text-emerald-700 text-2xl">Stok Hari Ini (${input})</p>
+        <ul class="mt-6 space-y-4 text-lg">
+          <li>✅ Lele 7-9 ekor per kilo → <strong>450 kg</strong> (ready)</li>
+        </ul>
+        <p class="mt-6 text-sm text-emerald-600">*Stok update real-time setiap pagi</p>
+      `;
+    }
+  </script>
+</body>
+</html>
